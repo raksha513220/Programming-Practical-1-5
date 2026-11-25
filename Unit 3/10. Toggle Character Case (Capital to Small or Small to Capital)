@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    char ch;
+    printf("Enter an alphabet: ");
+    scanf(" %c", &ch);
+    if (ch >= 'A' && ch <= 'Z') {
+        ch = ch + ('a' - 'A');
+        printf("Converted character: %c\n", ch);
+    } else if (ch >= 'a' && ch <= 'z') {
+        ch = ch - ('a' - 'A');
+        printf("Converted character: %c\n", ch);
+    } else {
+        printf("Input is not an English alphabet\n");
+    }
+    return 0;
+}
