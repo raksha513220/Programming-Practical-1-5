@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int quantity;
+    float price, total, discount, final_payment;
+    printf("Enter price of item: ");
+    scanf("%f", &price);
+    printf("Enter quantity: ");
+    scanf("%d", &quantity);
+    total = price * quantity;
+    if (total > 1000.0f) {
+        discount = 0.15f * total;
+    } else {
+        discount = 0.10f * total;
+    }
+    final_payment = total - discount;
+    printf("\nTotal Purchase = %.2f\n", total);
+    printf("Discount       = %.2f\n", discount);
+    printf("Final Payment  = %.2f\n", final_payment);
+    return 0;
+}
