@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int x, y;
+    long long power = 1;
+    printf("Enter base (x): ");
+    scanf("%d", &x);
+    printf("Enter exponent (y): ");
+    scanf("%d", &y);
+
+    if (y < 0) {
+        printf("Negative exponents are not supported in integer power.\n");
+        return 0;
+    }
+    for (int i = 1; i <= y; i++) {
+        power *= x;
+    }
+    printf("%d^%d = %lld\n", x, y, power);
+    return 0;
+}
