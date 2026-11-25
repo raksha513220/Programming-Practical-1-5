@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    float salary, hra, ta, da, pf, gross_salary;
+    printf("Enter basic salary: ");
+    scanf("%f", &salary);
+    if (salary >= 5000.0f) {
+        hra = 0.05f * salary;
+        ta  = 0.06f * salary;
+        da  = 0.04f * salary;
+        pf  = 0.05f * salary;
+    } else {
+        hra = 0.04f * salary;
+        ta  = 0.05f * salary;
+        da  = 0.03f * salary;
+        pf  = 0.04f * salary;
+    }
+    gross_salary = salary + hra + ta + da - pf;
+    printf("\nBasic Salary = %.2f\n", salary);
+    printf("HRA          = %.2f\n", hra);
+    printf("TA           = %.2f\n", ta);
+    printf("DA           = %.2f\n", da);
+    printf("PF           = %.2f\n", pf);
+    printf("Gross Salary = %.2f\n", gross_salary);
+    return 0;
+}
