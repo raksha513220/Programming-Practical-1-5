@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    float a, b;
+
+    printf("Enter first number: ");
+    scanf("%f", &a);
+    printf("Enter second number: ");
+    scanf("%f", &b);
+
+    printf("\nAddition (%.2f + %.2f) = %.2f\n", a, b, a + b);
+    printf("Subtraction (%.2f - %.2f) = %.2f\n", a, b, a - b);
+    printf("Multiplication (%.2f * %.2f) = %.2f\n", a, b, a * b);
+
+    if (b != 0) {
+        printf("Division (%.2f / %.2f) = %.2f\n", a, b, a / b);
+        printf("Modulo (%d %% %d) = %d\n", (int)a, (int)b, (int)a % (int)b);
+    } else {
+        printf("Division and Modulo by zero are not allowed.\n");
+    }
+
+    return 0;
+}
