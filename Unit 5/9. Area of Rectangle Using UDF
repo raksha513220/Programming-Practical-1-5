@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+float areaRectangle(float length, float width) {
+    return length * width;
+}
+
+int main() {
+    float l, w;
+    printf("Enter length and width: ");
+    scanf("%f %f", &l, &w);
+    printf("Area of Rectangle = %.2f\n", areaRectangle(l, w));
+    return 0;
+}
